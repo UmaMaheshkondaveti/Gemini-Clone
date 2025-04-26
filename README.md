@@ -1,12 +1,100 @@
-# React + Vite
+# Gemini AI Chat Interface
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React-based chat interface for Google's Gemini AI model, providing a clean and intuitive way to interact with the powerful language model.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Modern UI** inspired by the official Gemini interface
+- **Real-time AI responses** using Google's Generative AI API
+- **Chat history** to track and revisit previous conversations
+- **Expandable sidebar** for easy navigation
+- **Suggestion cards** to help users get started
 
-## Expanding the ESLint configuration
+## Project Structure
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```
+src/
+├── assets/
+│   └── assets.js        # Central export for icons and images
+├── components/
+│   ├── Main/
+│   │   ├── Main.jsx     # Main chat interface component
+│   │   └── Main.css
+│   └── Sidebar/
+│       ├── Sidebar.jsx  # Sidebar navigation component
+│       └── sidebar.css
+├── config/
+│   └── gemini.js        # Gemini API configuration
+├── context/
+│   └── Context.jsx      # React context for state management
+└── App.jsx              # Root application component
+```
+
+## Setup and Installation
+
+1. Clone the repository
+2. Install dependencies:
+   ```
+   npm install
+   ```
+3. Create a `.env` file in the root directory with your Gemini API key:
+   ```
+   REACT_APP_GEMINI_API_KEY=your_api_key_here
+   ```
+4. Start the development server:
+   ```
+   npm start
+   ```
+
+## API Configuration
+
+This project uses the Google Generative AI JavaScript SDK to interact with the Gemini API. The configuration includes:
+
+- Temperature: 0.9 (for creative responses)
+- Safety settings to filter inappropriate content
+- Support for multi-turn conversations
+
+## Usage
+
+1. Type your prompt in the input field at the bottom of the screen
+2. Click the send icon or press Enter to submit
+3. View the AI's response in the chat area
+4. Access previous conversations from the sidebar
+
+## Components
+
+### Main
+
+The central component displaying the chat interface, suggestion cards, and input field.
+
+### Sidebar
+
+Collapsible navigation panel showing chat history and application controls.
+
+### Context Provider
+
+Manages application state including:
+- Current and previous prompts
+- Loading states
+- Chat results
+- New chat initialization
+
+## Dependencies
+
+- React
+- @google/generative-ai
+
+## Security Note
+
+Always protect your API keys and avoid exposing them in client-side code for production applications. Consider implementing a backend service to handle API calls securely.
+
+## License
+
+MIT
+
+## Installation
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/UmaMaheshkondaveti/Gemini-Clone
