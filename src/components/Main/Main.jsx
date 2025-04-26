@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { assets } from "../../assets/assets";
-import "./main.css";
+import "./Main.css";
 import { Context } from "../../context/Context";
 const Main = () => {
 	const {
@@ -27,7 +27,7 @@ const Main = () => {
 					<>
 						<div className="greet">
 							<p>
-								<span>Hello , Dev </span>
+								<span>Hello , Uma Mahesh </span>
 							</p>
 							<p>How Can i Help You Today?</p>
 						</div>
